@@ -113,3 +113,19 @@ main {
 #fifth-slider-point:checked~.title-with-input-container .title-meme-track {
     margin-top: -4.5rem;
 }
+
+@media screen and (max-width: 320px) {
+    main {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .input-wrapper {
+        justify-content: center;
+    }
+
+    .title-with-input-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
