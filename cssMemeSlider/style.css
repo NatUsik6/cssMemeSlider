@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    transition: .3s;
 }
 
 main {
-    width: 75%;
+    width: 55%;
     margin: 1% auto;
     overflow: hidden;
     display: flex;
@@ -20,6 +21,7 @@ main {
 .meme {
     width: 100%;
     height: 30rem;
+    border-radius: 1rem;
 }
 
 .title-with-input-container {
@@ -42,6 +44,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.label-point:hover .slider-point {
+    background-color: chocolate;
+    border-color: chocolate;
 }
 
 .slider-point {
@@ -53,11 +61,55 @@ main {
     box-sizing: border-box;
 }
 
-.input-point:checked + .label-point .slider-point {
+#first-slider-point:checked~.title-with-input-container label[for="first-slider-point"] .slider-point,
+#second-slider-point:checked~.title-with-input-container label[for="second-slider-point"] .slider-point,
+#third-slider-point:checked~.title-with-input-container label[for="third-slider-point"] .slider-point,
+#forth-slider-point:checked~.title-with-input-container label[for="forth-slider-point"] .slider-point,
+#fifth-slider-point:checked~.title-with-input-container label[for="fifth-slider-point"] .slider-point {
     background: transparent;
+}
+
+#first-slider-point:checked~.images-container {
+    margin-left: 0;
+}
+
+#second-slider-point:checked~.images-container {
+    margin-left: -100%;
+}
+
+#third-slider-point:checked~.images-container {
+    margin-left: -200%;
+}
+
+#forth-slider-point:checked~.images-container {
+    margin-left: -300%;
+}
+
+#fifth-slider-point:checked~.images-container {
+    margin-left: -400%;
 }
 
 .title-meme {
     overflow: hidden;
     height: 1.125rem;
+}
+
+#first-slider-point:checked~.title-with-input-container .title-meme-track {
+    margin-top: 0;
+}
+
+#second-slider-point:checked~.title-with-input-container .title-meme-track {
+    margin-top: -1.125rem;
+}
+
+#third-slider-point:checked~.title-with-input-container .title-meme-track {
+    margin-top: -2.25rem;
+}
+
+#forth-slider-point:checked~.title-with-input-container .title-meme-track {
+    margin-top: -3.375rem;
+}
+
+#fifth-slider-point:checked~.title-with-input-container .title-meme-track {
+    margin-top: -4.5rem;
 }
